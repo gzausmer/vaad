@@ -1,0 +1,55 @@
+<table class="table table-striped table-hover">
+
+    <thead>
+    <tr>
+        <th>
+            <h2>Expenses</h2>
+        </th>
+        <th></th>
+        <th><a href="#" ui-sref="Shell.BudgetView" class="list-group-item" ng-click="selectView('budgetView')">Return to normal Size</a></th>
+        <th><button class="btn btn-warning btn-sm" ng-click="resetExpenceRows()">reset</button></th>
+
+    </tr>
+
+    </thead>
+    <tbody>
+    <tr ng-repeat="expence in budgetExpences">
+
+        <td ng-hide="expence.id">{{expence.key}}</td>
+        <td ng-hide="expence.id">{{expence.value | currency}}</td>
+
+        <td ng-show="expence.id"><input class="form-control" type="text" ng-model="expence.key"></td>
+        <td ng-show="expence.id"><input class="form-control" type="number"ng-model="expence.value"></td>
+
+        <td ng-hide="expence.id"><a ng-click="editExpenceRow(expence)">Edit</a></td>
+
+        <td ng-show="expence.id"><a ng-click="saveExpenceRow(expence, expence.key, expence.value)">Save</a></td>
+        <td><button class="btn bg-danger btn-xs" ng-click="removeExpenceRow(expence.key)">Remove</button></td>
+
+    </tr>
+
+    <tr>
+        <td ng-show="AddExpensePressed"><input class="form-control" type="text" ng-model="expence.key"></td>
+        <td ng-show="AddExpensePressed"><input class="form-control" type="number"ng-model="expence.value"></td>
+        <td ng-show="AddExpensePressed"><button class="btn bg-danger" ng-click="cancelAddExpense()">Cancel</button></td>
+        <td ng-show="AddExpensePressed"><button class="btn bg-success" ng-click="saveExpense(expence.key, expence.value)">Add</button></td>
+
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><span class="glyphicon glyphicon-plus"></span><a class="text-center" ng-click="addExpense()">Add Expense</a></td>
+    </tr>
+
+    <tr >
+        <td class="bg-info"><h4>Total</h4></td>
+        <td class="bg-info"></td>
+        <td class="bg-info"></td>
+        <td class="bg-info"><h4>{{totalExpences() | currency}}</h4></td>
+    </tr>
+
+    </tbody>
+
+</table>

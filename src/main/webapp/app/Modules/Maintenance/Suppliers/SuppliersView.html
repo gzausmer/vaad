@@ -1,0 +1,40 @@
+<div class="col-lg-offset-3">
+<table class="table table-striped table-hover">
+
+    <thead>
+    <tr>
+        <th>
+            <h2>Suppliers</h2>
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>ID</td>
+        <td>NAME</td>
+        <td>PROFESSION</td>
+        <td>PHONE</td>
+        <td>EMAIL</td>
+        <td>COMPANY</td>
+        <td>BUISNESS_NUMBER</td>
+        <td></td>
+        <td></td>
+
+    </tr>
+    <tr ng-repeat="supplier in vm.suppliers">
+        <td>{{supplier.id}}</td>
+        <td>{{supplier.name}}</td>
+        <td>{{supplier.profession}}</td>
+        <td>{{supplier.phone}}</td>
+        <td>{{supplier.email}}</td>
+        <td>{{supplier.company}}</td>
+        <td>{{supplier.buisness_number}}</td>
+
+        <td ng-hide="expence.id"><a ng-click="editExpenceRow(expence)">Edit</a></td>
+        <td ng-show="expence.id"><a ng-click="saveExpenceRow(expence, expence.key, expence.value)">Save</a></td>
+        <td><button class="btn bg-danger btn-xs" ng-click="removeExpenceRow(expence.key)">Remove</button></td>
+    </tr>
+    </tbody>
+
+</table>
+</div>

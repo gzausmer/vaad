@@ -1,0 +1,68 @@
+/* Styles go here */
+
+
+/*.CustomSidebar {*/
+     /*width: 200px;*/
+     /*height: 0px;*/
+     /*background: red;*/
+     /*-webkit-transition: width 2s; !* For Safari 3.1 to 6.0 *!*/
+     /*transition: width 1s,height 1s;*/
+
+ /*}*/
+
+/*.CustomSidebar:hover {*/
+    /*width: 300px;*/
+    /*height: 600px;*/
+/*}*/
+.ng-aside .modal-content {
+    width: 50%;
+}
+
+.tryingSomething{
+    position: absolute;
+}
+
+#nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.navbar {
+    z-index: 10000 !important;
+}
+
+#big-checkbox {width: 300px !important; height: 300px !important;}
+
+.glyphicon.glyphicon-bell {  font-size: 150%;  }
+
+#notification {color: #39f !important;  }
+
+@-webkit-keyframes colours {
+    0% {color: #ffd0db;}
+    10% {color: #ffa2ba;}
+    25% {color: #fb6acf;}
+    40% {color: #e86eb7;}
+    50% {color: #f46ac3;}
+    60% {color: #e86eb7;}
+    75% {color: #fb6acf;}
+    90% {color: #ffa2ba;}
+    100% {color: #ffd0db;}
+
+}
+#notification {
+    -webkit-animation-direction: normal;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: colours;
+    -webkit-animation-timing-function: ease;
+}​
+
+ /*#pushRight{*/
+     /*margin-right: 100px !important;*/
+ /*}*/
+
+ .navbar.navbar-default{
+    position: fixed !important;
+     height: 100%;
+     width:100%;
+ }

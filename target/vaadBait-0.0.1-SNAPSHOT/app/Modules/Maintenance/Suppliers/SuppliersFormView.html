@@ -1,0 +1,44 @@
+<!--Admin - 'add Supplier' Form:-->
+
+<div class=col-lg-offset-3>
+    <div class="col-lg-6">
+        <h2>New Supplier: </h2>
+        <form name="supplierDetails" role="form">
+            <div class="form-group">
+                <label>Supplier Name:</label>
+                <input type="text" class="form-control" id="ContractorName" placeholder="Enter Contractor Name" ng-model="supplierDetails.name">
+            </div>
+            <div class="form-group">
+                <label>Profession</label>
+                <input type="text" class="form-control" id="Profession" placeholder="Enter Profession" ng-model="supplierDetails.profession">
+            </div>
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="text" class="form-control" id="Phone Number" placeholder="Phone Number"ng-model="supplierDetails.phone">
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="text" class="form-control" id="Email" placeholder="Email"ng-model="supplierDetails.email">
+            </div>
+            <div class="form-group">
+                <label>Company Name</label>
+                <input type="text" class="form-control" id="Company Name" placeholder="Company Name" ng-model="supplierDetails.company">
+            </div>
+            <div class="form-group">
+                <label>Buisness Number</label>
+                <input type="text" class="form-control" id="Buisness Number" placeholder="Buisness Number" ng-model="supplierDetails.buisness_number">
+            </div>
+
+            <button type="button" class="btn btn-default" ng-click="submitSupplier()">Submit</button>
+        </form>
+       </div>
+    <a href="#" ui-sref="Shell.ScheduledMaintenanceForm">back to form</a>
+</div>
+
+
+
+
+
+
+
+

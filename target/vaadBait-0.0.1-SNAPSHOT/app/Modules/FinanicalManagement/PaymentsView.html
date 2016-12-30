@@ -1,0 +1,45 @@
+
+<div class = "container">
+    <div class = "row">
+    <div class="col-lg-offset-3">
+
+        <div class="col-lg-3" id="nopadding">
+            <input type="text" class="form-control" placeholder="Filter" ng-model="tableFilter" ngfx-bounce-in-up="isSelected"/>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+    <table class="table table-striped table-hover">
+
+        <thead>
+        <tr>
+            <th><h4>Apprtmnt</h4></th>
+            <th><h4>Pays per month</h4></th>
+            <th><h4>Pays per year</h4></th>
+            <th><h4>Payment method</h4></th>
+            <th><h4>Paid from January 2016</h4></th>
+            <th><h4>Paid in Advance</h4></th>
+            <th><h4>Owes from previous year</h4></th>
+            <th><h4>Currently owes</h4></th>
+            <th><h4>Paid up to current month</h4></th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in data | filter: tableFilter">
+            <td>{{item.Apprtmnt}}</td>
+            <td>{{item.Pays_per_month}}</td>
+            <td>{{item.Pays_per_year}}</td>
+            <td>{{item.Payment_method}}</td>
+            <td>{{item.Paid_from_January_2016}}</td>
+            <td>{{item.Paid_in_Advance}}</td>
+            <td>{{item.Owes_from_previous_year}}</td>
+            <td>{{item.Currently_owes}}</td>
+            <td style="background:{{item.Paid_up_to_current_month == 'yes'?'':'red'}}">{{item.Paid_up_to_current_month}}</td>
+        </tr>
+
+        </tbody>
+    </table>
+    </div>
+</div>
+

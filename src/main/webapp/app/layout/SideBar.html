@@ -1,0 +1,24 @@
+
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+
+    <div ngfx-slide-in-left="show">
+        <div class="list-group">
+            <a href="#" ui-sref="Shell.BuildingForm" class="list-group-item" ng-click="selectView('BuildingForm')">Building / Assets</a>
+            <a href="#" ui-sref="Shell.ContractorView" class="list-group-item" ng-click="selectView('contractorView')">Management Company</a>
+            <a href="#" ui-sref="Shell.PaymentsView" class="list-group-item" ng-click="selectView('PaymentsView')">Vaad</a>
+            <a class="list-group-item" ng-click="isExpandedMaintenance = !isExpandedMaintenance">Maintenance</a>
+            <div class= "list-group" ng-show="isExpandedMaintenance">
+                <div class="col-lg-offset-2">
+            	<a href="#" ui-sref="Shell.ScheduledMaintenanceForm" class="list-group-item">Add Scheduled Maintenance</a>
+            	<a href="#" ui-sref="Shell.EventMaintenanceForm" class="list-group-item">Add Event Maintenance</a>
+                    <a href="#" ui-sref="Shell.MaintenanceJobsView" class="list-group-item">View Maintenance Jobs</a>
+            	<a href="#" ui-sref="Shell.SuppliersFormView" class="list-group-item">Add Suppliers</a>
+                    <a href="#" ui-sref="Shell.SuppliersView" class="list-group-item">View Suppliers</a>
+
+                </div>
+            </div>
+            <a href="#" ui-sref="Shell.BudgetView" class="list-group-item" ng-click="selectView('budgetView')">Financial Management</a>
+        </div>
+    </div>
+
+</div>

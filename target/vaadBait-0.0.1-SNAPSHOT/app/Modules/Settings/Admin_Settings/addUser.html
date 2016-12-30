@@ -1,0 +1,82 @@
+<!--Admin - 'add User' Form:-->
+<div class=col-lg-offset-3 ngfx-bounce-in-up="isSelected()">
+    <div class="col-lg-4">
+        <h2>New User: </h2>
+        <form name="newUserForm" role="form">
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Name" ng-model="newUserDetails.name">
+            </div>
+            <div class="form-group">
+                <label>Role:</label>
+                <select class="form-control" id="AssetType" ng-model="newUserDetails.role">
+                    <optgroup label="Managers">
+                    <option>Management Company</option>
+                    <option>Chairpersons of Vaad</option>
+                    <option>Authorised User</option>
+                `   </optgroup>
+                    <optgroup label="Members">
+                    <option>Vaad Member</option>
+                    <option>Owner</option>
+                    </optgroup>
+                    <optgroup label="Tenants">
+                    <option>Tenant</option>
+                    <option>Other</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="text" class="form-control" id="email" placeholder="Email"ng-model="newUserDetails.email">
+            </div>
+            <div class="form-group">
+                <label>Passowrd</label>
+                <input type="password" class="form-control" id="password" placeholder="Password" ng-model="newUserDetails.password">
+            </div>
+
+            <button type="button" class="btn btn-default" ng-click="submitNewUser()">Submit</button>
+        </form>
+    </div>
+    <div class="col-lg-8" id="beInBackground">
+
+        <h1>{{newUserDetails.name}}</h1>
+        <h4>{{newUserDetails.role}}</h4>
+        <h2>Users</h2>
+        <th><button class="btn btn-warning btn-sm" ng-click="resetUserRows()">reset</button></th>
+        <table class="table table-striped table-hover">
+            <thead>
+            <tr>
+                <th><h4>Name</h4></th>
+                <th><h4>Role</h4></th>
+                <th><h4>Email</h4></th>
+                <th><h4>Password</h4></th>
+                <th><input type="text" class="form-control" placeholder="Search for User" ng-model="userFilter"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="user in usersList | filter: userFilter">
+                <td ng-show="user.id"><input class="form-control" type="text" placeholder="{{user.name}}"></td>
+                <td ng-show="user.id"><input class="form-control" type="text" placeholder="{{user.role}}"></td>
+                <td ng-show="user.id"><input class="form-control" type="text" placeholder="{{user.email}}"></td>
+                <td ng-show="user.id"><input class="form-control" type="text" placeholder="{{user.password}}"></td>
+                <td ng-show="user.id"><a ng-click="saveUserRow(user)">Save</a></td>
+
+                <td ng-hide="user.id" ng-model="user.name">{{user.name}}</td>
+                <td ng-hide="user.id" ng-model="user.role">{{user.role}}</td>
+                <td ng-hide="user.id" ng-model="user.email">{{user.email}}</td>
+                <td ng-hide="user.id" ng-model="user.password">{{user.password}}</td>
+                <td><button class="btn bg-info btn-sm" href="" ng-hide="user.id" ng-click="editUserRow(user)">Edit</button>
+                    <button class="btn bg-danger btn-sm" ng-click="removeUserRow(user.name)">Remove</button></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+

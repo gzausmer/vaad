@@ -1,0 +1,11 @@
+<div ng-controller="ShellCtrl" class="container-fluid" ng-mousemove="fadeWelcome = true">
+
+    <div ui-view="NavBar" class="row"></div>
+    <h4 ng-hide ="alreadyWelcomed > 1" class="text-center" ngfx-pulse="true" ngfx-speed="slow" ngfx-fade-out="fadeWelcome" ngfx-speed="slow">Welcome {{usernameWelcome}}!</h4>
+<div id="content" class="row">
+    <div ui-view ="Expenses" ngfx-zoom-in="isSelected('expensesFullSize')" ngfx-zoom-out="isSelected('expensesFullSize')==false"></div>
+    <div ui-view="SideBar" ng-hide="isSelected('expensesFullSize')"></div>
+    <div ui-view></div>
+
+</div>
+</div>
