@@ -6,13 +6,10 @@
  */
 
 angular.module('myApp')
-    .controller('MaintenanceJobsCtrl',['$state','$scope','$filter','$uibModal','ViewService', '$http','SharedData',
-        function($state, $scope,$filter,$uibModal, ViewService, $http,SharedData) {
+    .controller('MaintenanceJobsCtrl',['$state','$scope','$filter','$uibModal', '$http','SharedData',
+        function($state, $scope,$filter,$uibModal, $http,SharedData) {
         console.log("****************************"+SharedData.selectedCheckBox);
         var vm = this;
-        vm.isSelected = function(){
-            return ViewService.isElementSelected('MaintenanceJobsView');
-        };
 
         $scope.statusTypes = ['unread','open','pending','closed'];
             $scope.selected = SharedData.selectedCheckBox;

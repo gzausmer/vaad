@@ -11,9 +11,7 @@
 
             .state('login', {
                 url: '/login',
-                templateUrl: 'app/loginPage/loginPage.html',
-                controller: 'LoginPageCtrl',
-                controllerAs: 'vm'
+                template: '<login></login>'
             })
 
             .state('register', {

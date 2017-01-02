@@ -4,13 +4,10 @@
 // ScheduledMaintenanceController
 
 angular.module('myApp')
-    .controller('ScheduledMaintenanceController',['uuid','$scope','SharedData','$http','ViewService', 'HttpService',
-        function (uuid, $scope, SharedData, $http, ViewService, HttpService) {
+    .controller('ScheduledMaintenanceController',['uuid','$scope','SharedData','$http', 'HttpService',
+        function (uuid, $scope, SharedData, $http, HttpService) {
 
             var vm = this;
-            vm.isSelected = function(){
-                return ViewService.isElementSelected('ScheduledMaintenanceForm');
-            };
 
             vm.showSystemInput = false;
             vm.submitNewSystem = function(){

@@ -8,12 +8,10 @@
 // ScheduledMaintenanceController
 
 angular.module('myApp')
-    .controller('EventMaintenanceController',['uuid','$state','$scope','SharedData','ViewService', 'HttpService',
-        function(uuid,$state, $scope, SharedData, ViewService, HttpService) {
+    .controller('EventMaintenanceController',['uuid','$state','$scope', 'HttpService',
+        function(uuid,$state, $scope, SharedData, HttpService) {
             var vm = this;
-            vm.isSelected = function(){
-                return ViewService.isElementSelected('EventMaintenanceForm');
-            };
+
 console.log(SharedData.email);
 
             vm.MaintanenceBuilding = [

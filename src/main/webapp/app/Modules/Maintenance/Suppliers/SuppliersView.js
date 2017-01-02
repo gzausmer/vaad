@@ -3,11 +3,8 @@
  */
 
 angular.module('myApp')
-    .controller('SuppliersCtrl',['$scope','ViewService', '$http', function($scope, ViewService, $http) {
+    .controller('SuppliersCtrl',['$scope', '$http', function($scope, $http) {
         var vm = this;
-        vm.isSelected = function(){
-            return ViewService.isElementSelected('SuppliersView');
-        };
 
         $http({
             method  : 'GET',

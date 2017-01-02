@@ -1,13 +1,10 @@
 //TODO - organise the whole sending of arrays. differtiate between addAndSubmit to submit (maybe name it 'Done")
 
 angular.module('myApp')
-.controller('BuildingFormCtrl',['$scope','ViewService', 'HttpService', 
-                                function($scope, ViewService, HttpService) {
+.controller('BuildingFormCtrl',['$scope', 'HttpService',
+                                function($scope, HttpService) {
 	var vm = this;
-	vm.isSelected = function(){
-		return ViewService.isElementSelected('BuildingForm');
-	};
-	
+
 	$scope.sendBuildingForm = function(){
 		alert('first');
 		HttpService.processForm('POST',angular.toJson(vm.BuildingDetails), './rest/addBuilding');

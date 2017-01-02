@@ -2,12 +2,7 @@
  * Created by gilzausmer on 19/10/2016.
  */
 angular.module('myApp')
-    .controller('AddUserCtrl',['$scope','ViewService', function($scope, ViewService) {
-
-        $scope.isSelected = function(){
-
-            return ViewService.isElementSelected('addUserView');
-        };
+    .controller('AddUserCtrl',['$scope', function($scope, ViewService) {
 
         $scope.newUserDetails = {};
 

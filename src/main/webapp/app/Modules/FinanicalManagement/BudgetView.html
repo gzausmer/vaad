@@ -1,6 +1,6 @@
 <div class = "container">
     <div class = "row">
-        <div class="col-lg-offset-3" ngfx-bounce-in-up="isSelected">
+        <div class="col-lg-offset-3" ngfx-bounce-in-up="true">
             <div class= "row">
 
             <h1 ng-hide="editBtnPressed">Budget: {{Budget | currency}}
@@ -40,7 +40,7 @@
                 <h2>Expences</h2>
                 </th>
             <th></th>
-            <th><a href="#" class="list-group-item" ng-click="selectView('expensesFullSize')">Full Size</a></th>
+            <th><a href="#" class="list-group-item">Full Size</a></th>
 
             <th><button class="btn btn-warning btn-sm" ng-click="resetExpenceRows()">reset</button></th>
 

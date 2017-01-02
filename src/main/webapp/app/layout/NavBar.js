@@ -2,7 +2,7 @@
  * Created by gilzausmer on 10/10/2016.
  */
 var app = angular.module('myApp');
-app.controller('NavBarCtrl',['$scope','$state','$http','ViewService','AuthenticationService','SharedData', function($scope,$state, $http, ViewService, AuthenticationService, SharedData){
+app.controller('NavBarCtrl',['$scope','$state','$http','AuthenticationService','SharedData', function($scope,$state, $http, AuthenticationService, SharedData){
 
     var vm = this;
 
@@ -56,11 +56,6 @@ app.controller('NavBarCtrl',['$scope','$state','$http','ViewService','Authentica
     });
 
     $scope.show = true;
-
-    $scope.selectView = function(element) {
-        SharedData.selectedCheckBox = ['unread'];
-        ViewService.selectElement(element);
-    }
 
     $scope.logout = function(){
      

@@ -2,13 +2,7 @@
  * Created by gilzausmer on 04/10/2016.
  */
 angular.module('myApp')
-    .controller('PaymentsViewController',['$scope','ViewService', function($scope, ViewService) {
-
-
-        $scope.isSelected = function(){
-            return ViewService.isElementSelected('PaymentsView');
-
-        };
+    .controller('PaymentsViewController',['$scope', function($scope) {
 
         $scope.data = [
             {

@@ -2,20 +2,7 @@
  * Created by gilzausmer on 12/10/2016.
  */
 angular.module('myApp')
-    .controller('ExpensesCtrl',['$scope','ViewService', function($scope, ViewService) {
-
-
-        $scope.isSelected = function(element){
-
-            return ViewService.isElementSelected(element);
-
-        };
-
-        $scope.selectView = function(element){
-
-            ViewService.selectElement(element);
-
-        };
+    .controller('ExpensesCtrl',['$scope', function($scope) {
 
         $scope.budgetExpencesEdited = [];
 
